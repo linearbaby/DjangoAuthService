@@ -1,0 +1,2 @@
+django-allauth[mfa,saml,socialaccount]==0.60.1
+djangorestframework
