@@ -249,7 +249,7 @@ REST_FRAMEWORK = {
 }
 
 ALLOWED_HOSTS = ["*"]
-CSRF_TRUSTED_ORIGINS = ["http://localhost"]
+CSRF_TRUSTED_ORIGINS = ["http://localhost", "https://analitic.sufood.ru"]
 SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 ACCOUNT_LOGIN_BY_CODE_ENABLED = True
 
