@@ -23,6 +23,9 @@ DEFAULT_FROM_EMAIL = "sentigram@mail.ru"
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_EMAIL_VERIFICATION = "mandatory"
 
+ACCOUNT_ADAPTER = 'example.demo.adapter.DefaultAccountAdapterCustom'
+URL_FRONT = 'https://analitic.sufood.ru/'
+
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",  # Add 'postgresql_psycopg2', 'postgresql',
