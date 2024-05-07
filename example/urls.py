@@ -1,5 +1,5 @@
 from django.contrib import admin
-from django.urls import include, path
+from django.urls import include, path, re_path
 from django.views.generic.base import TemplateView
 from allauth.account.views import confirm_email
 
@@ -10,7 +10,7 @@ admin.autodiscover()
 urlpatterns = [
     path('accounts/check-auth/', CheckAuthView.as_view(), name='check-auth'),
     
-    path(r'accounts/verify-email/(?P<key>\w+)/$',
+    re_path(r'accounts/verify-email/(?P<key>\w+)/$',
         confirm_email, name="account_confirm_email"),
     path("", TemplateView.as_view(template_name="index.html")),
     path("accounts/", include("allauth.urls")),
