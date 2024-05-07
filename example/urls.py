@@ -10,7 +10,7 @@ admin.autodiscover()
 urlpatterns = [
     path('accounts/check-auth/', CheckAuthView.as_view(), name='check-auth'),
     
-    re_path(r'accounts/verify-email/(?P<key>\w+)/$',
+    path('accounts/verify-email/<str:key>',
         confirm_email, name="account_confirm_email"),
     path("", TemplateView.as_view(template_name="index.html")),
     path("accounts/", include("allauth.urls")),
