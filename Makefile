@@ -16,4 +16,4 @@ makeadmin:
 
 .PHONY:
 runserver:
-	$(MANAGE_PY) runserver 0.0.0.0:8002
+	$(MANAGE_PY) runserver 0.0.0.0:8000
