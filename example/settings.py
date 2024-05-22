@@ -5,7 +5,7 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-DEBUG = True
+DEBUG = os.environ.get("DEBUG", False)
 
 ADMINS = (
     ('artem', 'artemiygotovtsev@gmail.com'),
@@ -24,7 +24,7 @@ ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_EMAIL_VERIFICATION = "mandatory"
 
 ACCOUNT_ADAPTER = 'example.demo.adapter.DefaultAccountAdapterCustom'
-URL_FRONT = 'https://analitic.sufood.ru/'
+URL_FRONT = 'http://localhost:8002/' if DEBUG else 'https://analitic.sufood.ru/'
 
 DATABASES = {
     "default": {
