@@ -24,8 +24,7 @@ ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_EMAIL_VERIFICATION = "mandatory"
 
 ACCOUNT_ADAPTER = 'example.demo.adapter.DefaultAccountAdapterCustom'
-# URL_FRONT = 'http://localhost:8002/' if DEBUG else 'https://analitic.sufood.ru/'
-URL_FRONT = 'https://analitic.sufood.ru/'
+URL_FRONT = 'http://localhost:8002/' if DEBUG else 'https://analitic.sufood.ru/'
 
 DATABASES = {
     "default": {
