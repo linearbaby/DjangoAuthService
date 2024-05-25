@@ -15,5 +15,9 @@ makeadmin:
 	$(MANAGE_PY) createsuperuser --noinput || true
 
 .PHONY:
+collectstatic:
+	$(MANAGE_PY) collectstatic
+
+.PHONY:
 runserver:
 	$(MANAGE_PY) runserver 0.0.0.0:${AUTH_PORT}
