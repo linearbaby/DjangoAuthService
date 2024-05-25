@@ -16,4 +16,4 @@ makeadmin:
 
 .PHONY:
 runserver:
-	$(MANAGE_PY) runserver 0.0.0.0:8000
+	$(MANAGE_PY) runserver 0.0.0.0:${AUTH_PORT}

@@ -6,10 +6,10 @@ RUN  apt-get update
 RUN  apt-get -y install libxml2-dev libxmlsec1-dev libxmlsec1-openssl
 
 WORKDIR /code/
-COPY requirements.txt \
-    manage.py \
-    Makefile \
-    ./
+COPY requirements.txt ./
 RUN pip install -r requirements.txt
+
+COPY     manage.py \
+        Makefile \
+        ./
 COPY ./example ./example/
-EXPOSE 8000
