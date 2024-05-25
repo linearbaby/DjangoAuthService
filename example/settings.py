@@ -5,7 +5,7 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-DEBUG = os.environ.get("DEBUG", False)
+DEBUG = (os.environ.get("DEBUG", "False").lower() == "true")
 
 ADMINS = (
     ('artem', 'artemiygotovtsev@gmail.com'),
